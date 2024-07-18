@@ -1,26 +1,20 @@
-import { config, fields, collection } from '@keystatic/core';
+import { config, fields, singleton } from "@keystatic/core";
 
 export default config({
   storage: {
-    kind: 'local',
+    kind: "github",
+    repo: {
+      owner: "Nombiembre",
+      name: "zap-keystatic",
+    },
   },
-  collections: {
-    posts: collection({
-      label: 'Posts',
-      slugField: 'title',
-      path: 'src/content/posts/*',
-      format: { contentField: 'content' },
+  singletons: {
+    test: singleton({
+      label: "test",
+      path: "src/content/posts/",
       schema: {
-        title: fields.slug({ name: { label: 'Title' } }),
-        content: fields.markdoc({
-          label: 'Content',
-          options: {
-            image: {
-              directory: 'src/assets/images/posts',
-              publicPath: '../../assets/images/posts/',
-            },
-          },
-        }),
+        title: fields.slug({ name: { label: "Title" } }),
+        content: fields.markdoc({ label: "Content" }),
       },
     }),
   },

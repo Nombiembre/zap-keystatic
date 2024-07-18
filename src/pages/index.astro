@@ -1,29 +1,31 @@
 ---
-import { getCollection } from 'astro:content';
+import Footer from '@/components/common/Footer.astro';
 import Layout from '../layouts/Layout.astro';
+import Hero from './sections/Hero.astro';
+import Sec1 from './sections/Sec1.astro';
+import Sec2 from './sections/Sec2.astro';
+import Sec3 from './sections/Sec3.astro';
+import Sec4 from './sections/Sec4.astro';
+import Sec5 from './sections/Sec5.astro';
+import Sec6 from './sections/Sec6.astro';
+import Sec7 from './sections/Sec7.astro';
+import Sec8 from './sections/Sec8.astro';
+import Sec9 from './sections/Sec9.astro';
+import Sponsors from './sections/Sponsors.astro';
 
-const posts = await getCollection('posts');
 ---
 
 <Layout title="Keystatic & Astro's Content Collections">
-  <div>
-    <h1>Keystatic ⚡️ + Astro 🚀</h1>
-    <p>
-      This homepage shows how to load data from Astro's content collections.
-    </p>
-    <p>
-      <a href="/keystatic">Click here to visit the Admin UI</a>, or the link
-      below to view a post in the collection.
-    </p>
-    <h2>Posts</h2>
-    <ul>
-      {
-        posts.map(post => (
-          <li>
-            <a href={`/posts/${post.slug}`}>{post.data.title}</a>
-          </li>
-        ))
-      }
-    </ul>
-  </div>
+  <Hero />
+  <Sponsors />
+  <Sec1 />
+  <Sec2 />
+  <Sec3 />
+  <Sec4 />
+  <Sec5 />
+  <Sec6 />
+  <Sec7 />
+  <Sec8 />
+  <Footer />
+  <Sec9 />
 </Layout>

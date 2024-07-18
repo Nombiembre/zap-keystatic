@@ -1,0 +1,169 @@
+---
+import { navigation } from "@/navigation.js";
+---
+
+<nav class="navbar navbar-expand-lg py-[0.9375rem]">
+  <div class="container mx-auto flex lg:justify-normal justify-between items-center">
+    <a class="navbar-brand mr-4" href="#">
+      <img class="img-fluid max-h-[50px]" src="/images/logo.png" alt="Logo" />
+    </a>
+
+    <button
+      class="navbar-toggler collapsed"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="flex-1 justify-content-end lg:flex hidden">
+      <ul
+        class="navbar-nav mx-auto flex justify-between items-center pr-[2.1875rem]"
+      >
+        {
+          navigation.map((item) => (
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href={item.href}
+                id={item.name}
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-expanded="true"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <a class="orderNwbtn sm:block hidden" href="/checkout4/">GET 50% OFF NOW </a>
+  </div>
+</nav>
+
+<style>
+  .orderNwbtn {
+    background: #ffc738;
+    color: #000 !important;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 25px;
+    transition: all 0.2s linear;
+    box-shadow: 0px 4px 10px 0px #d2d0ca;
+    border: 1px solid #ffff;
+  }
+
+  .orderNwbtn span {
+    color: #ffd800;
+    padding-right: 10px;
+  }
+
+  .orderNwbtn:hover {
+    color: #fff;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0.5rem 1.875rem;
+    display: block;
+    transition: all 0.2s linear;
+
+    &:hover {
+      background-color: #ebe2cb;
+    }
+  }
+
+  .navbar {
+    --bs-gray-800: #343a40;
+    --bs-gray-300: #dee2e6;
+
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    & .container {
+      --_max-width: 1276px !important;
+    }
+  }
+
+  /* Mobile Hamburger */
+
+  .navbar-toggler-icon {
+  background-image: none !important;
+  background-color: var(--bs-gray-800);
+  height: 3px;
+  width: 25px;
+  margin: 10px 0;
+  position: relative;
+  transition: all 0.35s ease-out;
+  transform-origin: center;
+}
+
+.navbar-toggler-icon::before {
+  display: block;
+  background-color: var(--bs-gray-800);
+  height: 3px;
+  content: "";
+  position: relative;
+  top: -7px;
+  transition: all 0.15s ease-out; /*taken down to hide quicker*/
+  transform-origin: center;
+}
+
+.navbar-toggler-icon::after {
+  display: block;
+  background-color: var(--bs-gray-800);
+  height: 3px;
+  content: "";
+  position: relative;
+  top: 4px;
+  transition: all 0.35s ease-out;
+  transform-origin: center;
+}
+
+.navbar-dark .navbar-toggler-icon,
+.navbar-dark .navbar-toggler-icon::before,
+.navbar-dark .navbar-toggler-icon::after {
+  background-color: var(--bs-gray-300);
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+  opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+  transform: rotate(-90deg) translateX(7px);
+}
+
+@media (max-width: 992px) {
+  /* .navbar-collapse {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 60px;
+    z-index: 9999999;
+    background: #fff;
+  } */
+
+  .navbar-toggler {
+    margin-left: auto;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+    border: none;
+    outline: none;
+  }
+}
+</style>
