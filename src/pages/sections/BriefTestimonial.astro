@@ -1,0 +1,92 @@
+---
+import Typography from "@/components/common/Typography.astro";
+import {
+  Content as Render,
+  frontmatter,
+} from "@/data/sections/briefTestimonial.md";
+
+const { title, desc, testimonial } = frontmatter;
+const { name, img, verified } = testimonial;
+---
+
+<section class="sec3 bg-beige pt-[3.5rem] pb-[4rem] text-center">
+  <div class="container max-w-[45%]">
+    <div class="sec3Hd md:col-8 mx-auto mb-[2rem]">
+      <Typography class="mb-5" as="h2" variant="h2-sm" color="black">
+        {title}
+      </Typography>
+
+      <p class="mb-3 md:px-28">{desc}</p>
+    </div>
+    <div class="mx-auto bg-white md:p-12 p-4">
+      <div class="quote || md:px-8 md:py-6 text-center">
+        <Render />
+      </div>
+      <div id="sticky-trigger" class="mt-3">
+        <div class="flex justify-center items-center px-4">
+          <div class="testiAr-img align-self-center">
+            <img src={img} width="45" alt="" />
+          </div>
+          <div class="testiAr review-icon">
+            <p>{name}</p>
+            <p class="flex gap-2">
+              <img
+                class="img-fluid ps-1"
+                src="/images/shield-check.svg"
+                alt="Verified Icon"
+              />
+              <span class="text-green">{verified}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sec3 .quote {
+    border-radius: 10px;
+    border: 1px #b78400 solid;
+    background-color: #fff5c3;
+  }
+
+  .sec3Hd img {
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .review-icon p {
+    font-size: 16px !important;
+    line-height: 23px;
+    margin-bottom: 0px !important;
+    font-weight: 700;
+  }
+  .review-icon p span.text-green {
+    font-size: 12px !important;
+    line-height: 22px;
+    font-weight: 400;
+  }
+
+  .testiAr {
+    padding-left: 10px;
+  }
+
+  .testiAr h2 {
+    font-size: 15px !important;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px !important;
+  }
+
+  .testiAr h2 img {
+    height: 19px;
+    margin-right: 10px;
+  }
+
+  .testiAr p {
+    font-size: 18px !important;
+    line-height: 23px;
+    margin-bottom: 5px !important;
+  }
+</style>

@@ -1,0 +1,25 @@
+---
+import ButtonPrimary from "@/components/common/ButtonPrimary.astro";
+import Typography from "@/components/common/Typography.astro";
+
+interface Props {
+  title: string
+  desc: string
+  buttonText: string
+  class?: string
+}
+
+const {title, desc, buttonText, class: className} = Astro.props
+---
+
+<section class=`bg-beige text-center py-[48px] ${className} grid gap-4`>
+  <Typography as="h2" variant='h2-cta' color="black">
+    {title}
+  </Typography>
+  <Typography as="p" variant='body-cta' color="black">
+    {desc}
+  </Typography>
+  <ButtonPrimary url="/checkout4/" class="mx-auto">
+    {buttonText}
+  </ButtonPrimary>
+</section>

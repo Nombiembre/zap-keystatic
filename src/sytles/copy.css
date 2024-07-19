@@ -1408,37 +1408,21 @@ p {
   padding-left: 15px;
 }
 
-.sec3 {
-  padding: 3.5rem 0 4rem 0;
-  background-color: #f6f3ec;
-}
 
-.sec3 .quote {
-  border-radius: 10px;
-  border: 1px #b78400 solid;
-  background-color: #fff5c3;
-}
+
+
 
 .trail-bg {
   background: url("../images/bg-trail.svg") no-repeat center center / auto 100%;
 }
 
-.sec3Hd {
-  text-align: center;
-  margin-bottom: 2rem;
-}
 
 .feat-2 {
   width: 100%;
   margin: auto;
 }
 
-.sec3Hd h2 {
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 49px;
-}
+
 
 .sec3Cnt1 h2 {
   font-size: 32px;
@@ -2417,14 +2401,7 @@ pulse
     line-height: 24px;
   }
 
-  .sec3 {
-    padding: 2rem 0;
-  }
-  .sec3 p {
-    font-size: 16px;
-    line-height: 26px;
-    text-align: start !important;
-  }
+
   .trail-bg {
     background: url("../images/bg-trail-m.svg") no-repeat center 25px / auto 80%;
   }

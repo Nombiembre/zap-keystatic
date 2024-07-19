@@ -1,113 +1,50 @@
-<section class="sec6">
-    <div class="container">
-        <div class="sec6Hd">
-            <h2><img class="img-fluid" src="/images/5stars.svg" alt="Stars"></h2>
-            <h2 class="px-2 mt-2">"Voted Best Bug Zapper On The Planet"</h2>
-        </div>
-        <div class="row d-flex">
-            <div class="col-md-4 px-md-0 px-4 order-md-1 order-2">
-                <div class="sec6List">
-                    <img class="img-fluid" src="/images/blue-tick.svg" alt="">
-                    <div>
-                        <h3>Convenient Handle: </h3>
-                        <p><span class="fw-bold">Easily hang it anywhere</span> for instant mosquito protection.</p>
-                    </div>
-                </div>
-                <div class="sec6List">
-                    <img class="img-fluid" src="/images/blue-tick.svg" alt="">
-                    <div>
-                        <h3>Expanded Killing Range: </h3>
-                        <p>
-                            Covers <span class="fw-bold">45 square meters—3X times the range of the original Zap Guardian!</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="sec6List">
-                    <img class="img-fluid" src="/images/blue-tick.svg" alt="">
-                    <div>
-                        <h3>UV Bug Attractant:</h3>
-                        <p class="bdr-btm"><span class="fw-bold">365nm UV light attracts and kills more mosquitoes</span> than ever before.</p>
-                    </div>
-                </div>
-                <div class="sec6List mb-md-0">
-                    <img class="img-fluid" src="/images/blue-tick.svg" alt="">
-                    <div>
-                        <h3>Extended Battery Life:</h3>
-                        <p class="last1">Enjoy up to <span class="fw-bold">24 hours of protection—2x longer than the original Zap Guardian.</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 align-self-center mx-auto order-md-2 order-1">
-                <img class="img-fluid d-block mx-auto" src="https://purpleassets.blob.core.windows.net/web/zapguardian/feat-4-product.png" alt="">
-            </div>
-            <div class="col-md-4 px-md-0 px-4 order-md-3 order-3">
-                <div class="sec6List">
-                    <img class="img-fluid" src="/images/blue-tick.svg" alt="">
-                    <div>
-                        <h3>Bright Camping Light: </h3>
-                        <p>
-                            Illuminate your space with <span class="fw-bold">12 ultra-bright LED lantern lamp beads.</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="sec6List">
-                    <img class="img-fluid" src="/images/blue-tick.svg" alt="">
-                    <div>
-                        <h3>Compact &amp; Portable: </h3>
-                        <p>
-                            <span class="fw-bold">Take it anywhere for on-the-go</span> mosquito defense.
-                        </p>
-                    </div>
+---
+import Typography from "@/components/common/Typography.astro";
+import review from "@/data/sections/review.json";
+const { title, img, icon, reviews } = review;
 
-                </div>
-                <div class="sec6List">
-                    <img class="img-fluid" src="/images/blue-tick.svg" alt="">
-                    <div>
-                        <h3>Solar Power Charging</h3>
-                        <p>
-                            Zap Guardian <span class="fw-bold">harnesses solar energy for longer lasting pest protection.</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="sec6List mb-md-0">
-                    <img class="img-fluid" src="/images/blue-tick.svg" alt="">
-                    <div>
-                        <h3>100% Non-Toxic:</h3>
-                        <p class="last2">
-                            Completely  <span class="fw-bold">safe for use around kids and pets.</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+const half = Math.ceil(reviews.length / 2);
 
-        <div class="sec6Hd mt-md-5  pt-md-5 mt-3">
-            <h2 class="d-md-block d-none">Enjoy A Peaceful Summer</h2>
-            <h2 class="d-md-none d-block">Enjoy A Peaceful<br>Summer</h2>
-            <h3 class="d-md-block">In 3 Simple Steps</h3>
+const firstHalf = reviews.slice(0, half);
+const secondHalf = reviews.slice(half);
+---
 
-        </div>
-        <div class="row howto text-center">
-            <div class="col-md-4">
-                <video class="r-25" id="mb-player1" loop="" autoplay="" muted="" playsinline="" poster="images/video_poster_1.png" onload="this.play()"><source src="https://purpleassets.blob.core.windows.net/web/zapguardian/volts-of-power-01.mp4" type="video/mp4"></video>
-                <h4 class="fw-bold mt-3 text-blue">2,000 Volts Of Power </h4>
-                <p class="mb-md-0 mb-4">Instantly eliminates bugs with a powerful 2,000-volt zap</p>
+<section class="container py-[3rem]">
+  <img class="mx-auto" src="/public/images/5stars.svg" alt="" />
+  <Typography class="text-center" as="h2" variant="h2-sm" color="black">
+    {title}
+  </Typography>
+  <div class="grid grid-cols-3 h-full mt-20">
+    <div class="flex flex-col gap-2 flex-grow justify-between">
+      {
+        firstHalf.map((review) => (
+          <div class="flex gap-4 items-start">
+            <img src={icon} class="size-[25px] mt-1" />
+            <div class="flex flex-col gap-2">
+              <span class="text-blue font-bold text-xl">{review.title}</span>
+              <br />
+              {review.desc}
             </div>
-            <div class="col-md-4">
-                <video class="r-25" id="mb-player2" loop="" autoplay="" muted="" playsinline="" poster="images/video_poster_2.png" onload="this.play()"><source src="https://purpleassets.blob.core.windows.net/web/zapguardian/weatherproof-02.mp4" type="video/mp4"></video>
-                <h4 class="fw-bold mt-3 text-blue">Weatherproof Design</h4>
-                <p>IPX7 waterproof rating allows for use in the rain, sleet or snow</p>
-            </div>
-            <div class="col-md-4">
-                <video class="r-25" id="mb-player3" loop="" autoplay="" muted="" playsinline="" poster="images/video_poster_3.png" onload="this.play()"><source src="https://purpleassets.blob.core.windows.net/web/zapguardian/usb-charging-03.mp4" type="video/mp4"></video>
-                <h4 class="fw-bold mt-3 text-blue">Fast USB Charging</h4>
-                <p>Lightning fast recharging effortlessly with the USB connector</p>
-            </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col text-center">
-                <a class="orderNwbtn" href="/checkout4/">GET 50% OFF ZAP GUARDIAN NOW</a>
-            </div>
-        </div>
+          </div>
+        ))
+      }
     </div>
+    <div class="flex items-center justify-center h-full">
+      <img src={img} alt="" />
+    </div>
+    <div class="flex flex-col gap-2 flex-grow justify-between">
+      {
+        secondHalf.map((review) => (
+          <div class="flex gap-4 items-start">
+            <img src={icon} class="size-[25px] mt-1" />
+            <div class="flex flex-col gap-2">
+              <span class="text-blue font-bold text-xl">{review.title}</span>
+              <br />
+              {review.desc}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </section>

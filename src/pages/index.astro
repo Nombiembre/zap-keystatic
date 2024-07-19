@@ -1,31 +1,34 @@
 ---
-import Footer from '@/components/common/Footer.astro';
-import Layout from '../layouts/Layout.astro';
-import Hero from './sections/Hero.astro';
-import Sec1 from './sections/Sec1.astro';
-import Sec2 from './sections/Sec2.astro';
-import Sec3 from './sections/Sec3.astro';
-import Sec4 from './sections/Sec4.astro';
-import Sec5 from './sections/Sec5.astro';
-import Sec6 from './sections/Sec6.astro';
-import Sec7 from './sections/Sec7.astro';
-import Sec8 from './sections/Sec8.astro';
-import Sec9 from './sections/Sec9.astro';
-import Sponsors from './sections/Sponsors.astro';
+import Footer from "@/components/common/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import Hero from "./sections/Hero.astro";
+import OverView from "./sections/OverView.astro";
+import CTA from "./sections/CTA.astro";
+import cta from '@/data/sections/cta.json';
+import BriefTestimonial from "./sections/BriefTestimonial.astro";
+import Sec4 from "./sections/Sec4.astro";
 
+const { title, desc, buttonText } = cta
 ---
 
 <Layout title="Keystatic & Astro's Content Collections">
   <Hero />
-  <Sponsors />
+  <CTA
+    title={title.title}
+    desc={desc.text}
+    buttonText={buttonText}
+  />
+  <OverView />
+  <BriefTestimonial />
+  <Sec4 />
+  <!-- 
   <Sec1 />
   <Sec2 />
   <Sec3 />
-  <Sec4 />
   <Sec5 />
   <Sec6 />
   <Sec7 />
   <Sec8 />
   <Footer />
-  <Sec9 />
+  <Sec9 /> -->
 </Layout>

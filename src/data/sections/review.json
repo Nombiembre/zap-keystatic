@@ -1,0 +1,39 @@
+{
+  "title": "\"Voted Best Bug Zapper On The Planet\"",
+  "img": "/images/feat-4-product.png",
+  "icon": "/images/blue-tick.svg",
+  "reviews": [
+    {
+      "title": "Convenient Handle:",
+      "desc": "Easily hang it anywhere for instant mosquito protection."
+    },
+    {
+      "title": "Expanded Killing Range: ",
+      "desc": "Expanded Killing Range: "
+    },
+    {
+      "title": "UV Bug Attractant:",
+      "desc": "365nm UV light attracts and kills more mosquitoes than ever before."
+    },
+    {
+      "title": "Extended Battery Life:",
+      "desc": "Enjoy up to 24 hours of protection—2x longer than the original Zap Guardian."
+    },
+    {
+      "title": " Bright Camping Light: ",
+      "desc": "Illuminate your space with 12 ultra-bright LED lantern lamp beads."
+    },
+    {
+      "title": "Compact & Portable: ",
+      "desc": "Take it anywhere for on-the-go mosquito defense."
+    },
+    {
+      "title": "Solar Power Charging",
+      "desc": "Zap Guardian harnesses solar energy for longer lasting pest protection."
+    },
+    {
+      "title": "100% Non-Toxic:",
+      "desc": "Completely safe for use around kids and pets."
+    }
+  ]
+}

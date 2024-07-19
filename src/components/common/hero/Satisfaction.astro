@@ -1,0 +1,15 @@
+---
+interface Props {
+  SatisfactionText: string;
+}
+
+const { SatisfactionText } = Astro.props;
+---
+
+<div class="flex gap-[10px] items-center mt-4">
+  <img src="/images/badge-satisfaction.png" width="90" alt="" />
+  <div class="grid gap-[3px] mt-[2px]">
+    <img class="w-[93px] " src="/images/5stars.svg" alt="Stars" />
+    <span class="text-[18px] mb-[4px]">{SatisfactionText}</span>
+  </div>
+</div>

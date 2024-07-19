@@ -7,11 +7,14 @@ export default {
         accent: {
           yellow: "#ffd500",
         },
+        beige: "#f6f3ec",
+        green: "#1bba86",
+        blue: "#1286cc",
       },
       fontSize: {
-        lg: ['18px', '26px']
-      }
+        lg: ["18px", "26px"],
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

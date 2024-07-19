@@ -1,0 +1,32 @@
+---
+import Typography from "@/components/common/Typography.astro";
+import { Content as Render, frontmatter } from "@/data/sections/overView.md";
+
+const { title, img } = frontmatter;
+---
+
+<section class="sec2 pt-[5rem] pb-[6rem]" id="overview">
+  <div class="container">
+    <div class="sec2Cnt1">
+      <div class="row">
+        <div class="col text-center mb-4">
+          <Typography as="h2" variant="h2-sm" color="black">
+            {title}
+          </Typography>
+        </div>
+      </div>
+      <div class="columns-2 mt-8">
+        <div class="">
+          <img src={img} class="max-w-[450px] ml-auto" />
+        </div>
+        <div
+          class="prose px-6 py-8 max-w-[85%]
+              prose-p:text-[16px]
+              prose-h4:text-[20px] prose-h4:font-[600] prose-h4:leading-8"
+        >
+          <Render />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

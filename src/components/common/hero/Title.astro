@@ -1,0 +1,27 @@
+---
+import Typography from "@/components/common/Typography.astro";
+
+interface Props {
+  title: any;
+  desc: string;
+}
+
+const { title, desc } = Astro.props;
+---
+
+<Typography class="max-w-[25ch] mt-4" as="h2" variant="h2" color="black">
+  {title.title}<br />
+  <span class="highlight">{title.titleSpan}</span>
+</Typography>
+<Typography class="max-w-[25ch]" as="h3" variant="h3" color="black">
+  {desc}
+</Typography>
+
+<style>
+  .highlight {
+    background: linear-gradient(#fff2af 30px, transparent 0);
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-size: 100% 34px;
+  }
+</style>

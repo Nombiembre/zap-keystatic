@@ -1,11 +1,14 @@
 ---
 interface Props {
   class?: string;
+  id?: string;
 }
 
-const { class: classList } = Astro.props;
+const { class: classList, id, ...props } = Astro.props;
 ---
 
-<section class=`container grid gap-4 ${classList}` {...Astro.props}>
-  <slot />
+<section class=`${classList}` id={id} {...props}>
+  <div class="container">
+    <slot />
+  </div>
 </section>

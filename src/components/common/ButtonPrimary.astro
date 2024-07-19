@@ -1,0 +1,36 @@
+---
+interface Props {
+  url: string;
+  class?: string;
+}
+
+const { url, class: className } = Astro.props;
+---
+
+<a
+  class=`uppercase ${className} max-w-fit block`
+  referrerpolicy="no-referrer"
+  target="_blank"
+  href={url}
+>
+  <slot />
+</a>
+
+<style>
+  a {
+    background: #ffc738;
+    color: #000 !important;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 25px;
+    transition: all 0.2s linear;
+    box-shadow: 0px 4px 10px 0px #d2d0ca;
+    border: 1px solid #ffff;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+</style>
