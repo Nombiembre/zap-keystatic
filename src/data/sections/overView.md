@@ -1,6 +1,6 @@
 ---
 title: 'The Ultimate Mosquito Death Trap '
-img: /public/images/zap-specs.png
+img: /images/zap-specs.png
 ---
 #### Zap Guardian delivers a powerful 360° anti-mosquito shield, ensuring you are free from annoying, biting insects once and for all.
 
