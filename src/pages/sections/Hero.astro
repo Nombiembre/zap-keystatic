@@ -1,5 +1,6 @@
 ---
 import Section from "@/components/common/Section.astro";
+import heroData from "@/data/singletons/index.json" with { type: "json" };
 ---
 
 <section class="bnrAr">
@@ -14,11 +15,12 @@ import Section from "@/components/common/Section.astro";
       </div>
       <h2>
         Powerful Bug<br /> Destroying <span>Zapper Kills</span><br /><span
-          >Mosquitoes Instantly</span>
+          >Mosquitoes Instantly</span
+        >
       </h2>
       <video
-        class="pb-4"
-        loop=""
+        class="pb-4 hidden border border-purple-400"
+        loop=""  
         autoplay=""
         muted=""
         playsinline=""
@@ -93,7 +95,8 @@ import Section from "@/components/common/Section.astro";
             </h2>
             <p>
               <span class="fw-medium text-dark"
-                >100% Satisfaction Guarantee</span>
+                >100% Satisfaction Guarantee</span
+              >
             </p>
           </div>
         </div>
@@ -102,7 +105,4 @@ import Section from "@/components/common/Section.astro";
   </div>
 </section>
 
-
-<style>
-    
-</style>
+<style></style>
