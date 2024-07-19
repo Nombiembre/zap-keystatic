@@ -9,8 +9,8 @@ import {
 
 export default config({
   storage: {
-    kind: "local",
-    // repo: "Nombiembre/zap-keystatic",
+    kind: "github",
+    repo: "Nombiembre/zap-keystatic",
   },
   singletons: {
     hero: heroSection,
